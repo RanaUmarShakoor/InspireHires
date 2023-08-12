@@ -1,0 +1,14 @@
+.desktop_2_section_1 {
+  background-image: url(../../assets/page2_bg1.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (min-width: 00px) and (max-width: 500px) {
+  .desktop_2_section_1 {
+    background-size: cover;
+    background-position: center;
+  }
+}

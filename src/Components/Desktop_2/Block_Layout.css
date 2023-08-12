@@ -1,0 +1,47 @@
+.block_layout_content h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.block_layout_content p{
+    font-size: 26px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.block_layout_content button{
+    width: 160px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    line-height: 30.26px;
+    font-weight: 700;
+    background-color: #33B2C7;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 00px) and (max-width: 699px) {
+    .block_layout_content h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    
+    .block_layout_content p{
+        font-size: 16px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    
+    .block_layout_content button{
+        width: 100px;
+        height: 36px;
+        color: white;
+        font-size: 14px;
+        line-height: 30.26px;
+        font-weight: 600;
+        background-color: #33B2C7;
+        border: none;
+        border-radius: 5px;
+    }
+}
