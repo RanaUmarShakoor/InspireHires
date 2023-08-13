@@ -1,12 +1,20 @@
 import { useState } from "react";
 import arrow_down_img from "../../assets/arrow_down.png";
 
-export function myAccordion({info}) {
+export function myAccordion({ info }) {
   const [isOpen, setisOpen] = useState(false);
 
   function clickHandler() {
     setisOpen(!isOpen);
   }
+
+  let accordionClasses =
+    "text-lg text-[#193A32] transition-height ease-in-out duration-500";
+
+  isOpen
+    ? (accordionClasses =
+        "h-[300px] p-5 text-xl text-[#1B1D32] bg-white block rounded-b-2xl transition-height ease-in-out duration-500")
+    : "h-0 p-5 text-xl text-[#1B1D32] bg-white block rounded-b-2xl transition-height ease-in-out duration-500";
 
   return (
     <div className="flex flex-col w-4/5">
@@ -19,13 +27,7 @@ export function myAccordion({info}) {
           <img src={arrow_down_img} className="w-6 h-6" />
         </button>
       </div>
-      {isOpen ? (
-        <div className=" p-5 text-xl text-[#1B1D32] bg-white block rounded-b-2xl">
-          {info.description}
-        </div>
-      ) : (
-        ""
-      )}
+      <div className={accordionClasses}>{info.description}</div>
     </div>
   );
 }
