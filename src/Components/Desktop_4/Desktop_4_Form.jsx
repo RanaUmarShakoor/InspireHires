@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import FileUpload from '../Layout/FileUpload'
+import FileUpload from "../Layout/FileUpload";
 // import { Checkbox } from "@material-tailwind/react";
-
 
 export function Desktop_4_Form() {
   const navigate = useNavigate();
-  let inputClasses = "flex-1 h-10 border border-[#D0D0D2] rounded-lg px-6";
+  let inputClasses = "flex-1 h-10 xxs:h-12 md:h-14 lg:h-16 xl:h-20 px-4 md:px-8 py-2 border border-[#D0D0D2] rounded-lg";
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -52,12 +51,12 @@ export function Desktop_4_Form() {
     };
 
     console.log(newData);
-    navigate('/');
+    navigate("/");
   }
 
   return (
-    <main className="p-16 xl:px-32 rounded-lg">
-      <section className="flex flex-col gap-y-10 p-16 border rounded-[40px] shadow-lg">
+    <main className="px-4 md:px-12 xl:px-32 py-10 md:py-20 bg-white">
+      <section className="p-8 md:p-16 flex flex-col gap-y-8 border rounded-[40px] text-black shadow-xl">
         <h1 className="text-xl xxs:text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
           Inspire Candidate Intake Form
         </h1>
@@ -125,7 +124,7 @@ export function Desktop_4_Form() {
               type="text"
               value={videoLink}
               onChange={videoLinkHandler}
-              className="w-[50%] h-10 mt-2 border border-[#D0D0D2] rounded-lg px-6"
+              className="w-[100%] md:w-[50%] h-10 mt-2 border border-[#D0D0D2] rounded-lg px-6"
               required
             />
           </div>
@@ -145,9 +144,15 @@ export function Desktop_4_Form() {
               label="Get the latest about open positions and company news in your
               inbox? Sign me up!"
             /> */}
-            <input type="checkbox" name="latestUpdatesCheck" id="latestUpdatesCheck" />
-            <label htmlFor="latestUpdatesCheck">Get the latest about open positions and company news in your
-              inbox? Sign me up!</label>
+            <input
+              type="checkbox"
+              name="latestUpdatesCheck"
+              id="latestUpdatesCheck"
+            />
+            <label htmlFor="latestUpdatesCheck">
+              Get the latest about open positions and company news in your
+              inbox? Sign me up!
+            </label>
           </div>
           <button className="w-28 h-10 text-xs xxs:text-sm font-bold rounded-[20px] text-white bg-[#33B2C7]">
             Get Started

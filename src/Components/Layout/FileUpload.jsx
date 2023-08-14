@@ -16,12 +16,12 @@ const FileUpload = (props) => {
 
   return (
     <div
-      className="relative w-full h-24 border border-[#D0D0D2] rounded-lg px-6 text-center hover:cursor-pointer"
+      className="relative w-full h-24 border border-[#D0D0D2] rounded-lg px-2 md:px-6 text-center hover:cursor-pointer"
       {...getRootProps()}
     >
       <input {...getInputProps()} />
       {uploadedFiles.length == 0 ? (
-        <p className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <p className="text-sm md:text-base absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
           {props.message}
         </p>
       ) : (
